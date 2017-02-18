@@ -1,7 +1,8 @@
 define('a', [], function () {
     var vm = avalon.define({
         $id: "a",
-        p:[]
+        p:[],
+        aRoot:'aaaa'
     });
 
     return avalon.controller(function($ctrl) {
@@ -9,7 +10,7 @@ define('a', [], function () {
         $ctrl.$onEnter = function() {
             $.ajax({
                 url:"a.json",
-                type:"post",
+                type:"get ",
                 success: function (data) {
                     vm.p = data
                 }
